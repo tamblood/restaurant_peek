@@ -1,0 +1,15 @@
+<h2>Here are your restaurants</h2>
+
+<ul>
+  <% @user.restaurants.each do |restaurant| %>
+   
+  <li>
+    <%= restaurant.name %> <br>
+    Today's Special: <%= restaurant.special %> <br>
+  </li> <br>
+
+  <% end %>
+
+  <a href="/users/<%= @user.id %>/sendtext">Send me a text!</a>
+
+</ul>
