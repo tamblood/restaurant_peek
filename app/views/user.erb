@@ -1,7 +1,7 @@
 <h1>
-Welcome Back, User!
+Welcome Back, <%= @user.name %>!
 </h1>
 
-<h3>Here are today's specials for your restaurants:</h3>
+<h3>Here are your selected restaurants:</h3>
 
-<a href="/users/<%= "#{@user_id}" %>/restaurants">Today's Specials<a>
+<a href="/users/<%= "#{@user_id}" %>/restaurants">Restaurants<a>

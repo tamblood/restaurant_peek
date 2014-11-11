@@ -6,10 +6,10 @@
   <li>
     <%= restaurant.name %> <br>
     Today's Special: <%= restaurant.special %> <br>
+    <a href="/users/<%= @user.id %>/restaurants/<%= restaurant.id %>">Select this restaurant</a>
   </li> <br>
 
   <% end %>
 
-  <a href="/users/<%= @user.id %>/sendtext">Send me a text!</a>
 
 </ul>
