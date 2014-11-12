@@ -42,15 +42,15 @@ class Restaurant < ActiveRecord::Base
     date_sat = doc.xpath('//*[@id="body"]/div/div[2]/div[1]/h4[6]').text
     pod_sat = doc.xpath('//*[@id="body"]/div/div[2]/div[1]/p[5]').text
 
-    week_data = [[pod_tues,date_tues],[pod_wed,date_wed],[pod_thurs,date_thurs],[pod_fri,date_fri],[pod_sat,date_sat]]
-
+    # no pizza of the day on monday or sunday
+    week_pizza = [[],[pod_tues],[pod_wed],[pod_thurs],[pod_fri],[pod_sat],[]]
 
     # check date
     today = Date.today
     if today.wday == 1 || today.wday == 7
       special_of_day = "There is no pizza of the day on Monday or Sunday"
     else
-      special_of_day = week_data[today.wday - 1]
+      special_of_day = week_pizza[today.wday][0]
     end
 
     # return special
