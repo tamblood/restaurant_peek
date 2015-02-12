@@ -2,4 +2,6 @@
 
 <h3> <%= @special %> </h3>
 
-<a href="/users/<%= @user.id %>/restaurants/<%= @restaurant.id %>/sendtext">Send me a text!</a>
+<a class="textuser" href="/users/<%= @user.id %>/restaurants/<%= @restaurant.id %>/sendtext">Send me a text!</a>
+<div class="textsent"></div>
+<a class="backtorestaurants" href="/users/<%= @user.id %>/restaurants"></a>

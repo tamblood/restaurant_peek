@@ -9,5 +9,10 @@ restaurant2.save
 restaurant3.save
 restaurant4.save
 user1.restaurants << restaurant4
-#user1.restaurants << restaurant3
+user1.save
+user1.restaurants << restaurant3
+user1.save
+user1.restaurants << restaurant2
+user1.save
+user1.restaurants << restaurant1
 user1.save
