@@ -1,1 +1,1 @@
-web: bundle exec shotgun -p ${PORT:-3000} 
+web: bundle exec thin start -p $PORT -e $RACK_ENV
