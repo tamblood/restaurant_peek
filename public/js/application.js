@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   // event handler on sign in button to hide welcome screen and display restaurant screen
-  $('.welcome_screen_sign_in a').on('click', function(e){
+  $('.welcome_screen_sign_in button').on('click', function(e){
     e.preventDefault();
     $('.welcome_screen').hide();
     $('.restaurant_screen').show();
